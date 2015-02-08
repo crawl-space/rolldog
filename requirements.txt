@@ -1,0 +1,3 @@
+falcon==0.2.0rc1
+gunicorn==19.2.0
+requests==2.5.1

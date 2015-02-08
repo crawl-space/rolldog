@@ -1,0 +1,32 @@
+{
+  "name": "rollbot",
+  "description": "Datadog and Rollbar integration",
+  "keywords": [
+    "datadog",
+    "rollbar",
+    "webhooks",
+    "python"
+  ],
+  "repository": "https://github.com/jbowes/rolldog",
+  "env": {
+    "ROLLBAR_URL": {
+      "description": "Optional url to your project in rollbar, for creating links.",
+      "required": false
+    },
+    "ROLLDOG_TOKEN": {
+      "description": "Random key for extra sekurity.",
+      "generator": "secret"
+    },
+    "DATADOG_API_KEY": {
+      "description": "Datadog API key to post events.",
+    },
+    "DATADOG_ENV_PREFIX": {
+      "description": "Optional value to prefix environment tags with (ex: 'inventory').",
+      "required": false
+    },
+    "SLACK_HOOK_URL": {
+      "description": "Optional incoming webhooks url for Slack integration.",
+      "required": false
+    }
+  }
+}

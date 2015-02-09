@@ -1,3 +1,5 @@
+# coding=utf-8
+
 import json
 import logging
 import os
@@ -122,8 +124,14 @@ class RollbarResource:
         tags = ["rollbar", "{}:{}".format(DATADOG_ENV_PREFIX,
             event.payload["environment"])]
 
+        # Datadog limits titles to 100 chars
+        title = event.fallback
+        if len(title) > 100:
+            text = u"…" + title[99:] + "\n" + text
+            title = title[:99] + u"…"
+
         msg = {
-            "title": event.fallback,
+            "title": title,
             "text": text,
             "tags": tags,
             "aggregation_key": aggregation_key,

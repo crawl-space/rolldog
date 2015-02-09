@@ -66,7 +66,7 @@ class Event(object):
             self.pretext = "Resolved item"
             self.level = "good"
         elif event_name == "exp_repeat_item":
-            self.pretext = "Resolved item"
+            self.pretext = "Repeated item"
             self.level = "warning"
         elif event_name == "reopened_item":
             self.pretext = "Reopened item"

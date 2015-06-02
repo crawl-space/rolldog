@@ -1,5 +1,5 @@
 {
-  "name": "rollbot",
+  "name": "rolldog",
   "description": "Datadog and Rollbar integration",
   "keywords": [
     "datadog",

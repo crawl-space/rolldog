@@ -175,7 +175,7 @@ class RollbarResource:
         if "total_occurrences" in payload:
             fields.append({
                 "title": "Occurences",
-                "value": payload["total_occurrences"],
+                "value": str(payload["total_occurrences"]),
                 "short": True,
                 })
 
